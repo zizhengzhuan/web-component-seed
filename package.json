@@ -1,0 +1,53 @@
+{
+  "name": "web-component-seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "test": "jest --config .jest.js",
+    "compile": "yd-tools run compile",
+    "clean": "yd-tools run clean",
+    "dist": "yd-tools run dist",
+    "pub": "yd-tools run pub",
+    "start": "rimraf _site && node ./site/scripts/generateColorLess.js && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js",
+    "site": "rimraf _site && cross-env NODE_ENV=production bisheng build -c ./site/bisheng.config.js && node ./site/scripts/generateColorLess.js"
+  },
+  "author": "re",
+  "license": "ISC",
+  "devDependencies": {
+    "add-dom-event-listener": "^1.0.2",
+    "babel-eslint": "^8.0.1",
+    "babel-polyfill": "^6.26.0",
+    "bisheng-theme-yd": "^1.1.11",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.28.7",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.0",
+    "eslint-plugin-markdown": "^1.0.0-beta.7",
+    "eslint-plugin-react": "^7.0.1",
+    "file-loader": "^1.1.6",
+    "glob": "^7.1.2",
+    "jest": "^22.0.4",
+    "jsdom": "^8.5.0",
+    "less-loader": "^4.0.5",
+    "mockdate": "^2.0.2",
+    "postcss-loader": "^2.0.9",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "yd-tools": "^1.7.3"
+  },
+  "dependencies": {
+    "antd": "^3.1.4",
+    "yd": "^2.12.4"
+  }
+}
